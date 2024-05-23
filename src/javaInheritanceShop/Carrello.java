@@ -46,7 +46,7 @@ public class Carrello {
 			int dimensioni = input.nextInt();
 			televisori.getDimensioni(dimensioni);
 
-			System.out.println("Il televisore puo colegarsi a internet? \n");
+			System.out.println("Il televisore puo colegarsi a internet? ");
 			String tv = input.nextLine();
 			String tvSmart = tv.toLowerCase();
 			televisori.getSmart(tvSmart);
@@ -55,14 +55,14 @@ public class Carrello {
 			break;
 			
 		}case "CUFFIE": {
+			Cuffie cuffie = new Cuffie(prodotto.nome, prodotto.marca, prodotto.prezzo, null, null);
 			System.out.println("Di che colore è le cuffie");
 			String coloreScelto = input.nextLine();
-			Cuffie cuffie = new Cuffie(prodotto.nome, prodotto.marca, prodotto.prezzo, null, null);
 			cuffie.getColore(coloreScelto);
 			
 			System.out.println(cuffie);
-		}
 			break;
+		}
 		default:
 			System.out.println("Forse non hai scelto un prodotto disponibile");
 		}

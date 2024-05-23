@@ -26,18 +26,18 @@ public class Prodotto {
 //	istanzio le caratteristiche del prodotto
 	private int codice;
 	protected String nome;
-	protected String descrizione; 
+	protected String marca; 
 	protected float prezzo;; 
 	private float iva;
 	private float prezzoIva;
 	
 //creo il costruttore del prodotto con i parametri
-	public  Prodotto(int codice, String nome, String descrizione, float prezzo, float iva, float prezzoIva) {
+	public  Prodotto( String nome, String marca, float prezzo) {
 		//stanzio le variabili del prodotto
 		
 		this.codice = getCodice();//	asegno il metodo che genera codice random
 		this.nome = nome;
-		this.descrizione = descrizione;
+		this.marca = marca;
 		this.prezzo = prezzo;
 		this.iva = getIva(); // asegno il metodo che calcola l'iva
 		this.prezzoIva = getPrezzoIva();// asegno il metodo che calcola il prozzo col'iva
@@ -53,12 +53,12 @@ public class Prodotto {
 		this.nome = nome;
 	}
 
-	public String getDescrizione() {
-		return descrizione;
+	public String getMarca() {
+		return marca;
 	}
 
-	public void setDescrizione(String descrizione) {
-		this.descrizione = descrizione;
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
 
 	public float getPrezzo() {
@@ -103,13 +103,13 @@ public class Prodotto {
 //	spongo il riepilogo delprodotto col metodo toString
 	public String toString() {
 		String riepilogoProdotto = ("DATI DEL PRODOTTO: \n" 
-				+ "codice: "  + this.codice + "\n" 
+				+ "Codice identificativo: "  + this.codice + "\n" 
 				+ "Nome prodotto: " + this.nome + "\n" 
-				+ "Descrizione prodotto: " +  this.descrizione + "\n" 
+				+ "Descrizione prodotto (marca): " +  this.marca + "\n" 
 				+ "Prezzo base: " + "€ " + this.prezzo + "\n" 
-				+ "iva 22%: " + this.getIva() + "\n" 
-				+ "Prezzo col'Iva: " + this.getPrezzoIva() + ". \n" 
-				+ "PRODOTTO: " + this.codice + " - "  + this.nome + " - " + this.descrizione + " - €" + this.getPrezzoIva() + "\n  \n");
+				+ "Iva 22%: € " + this.getIva() + "\n" 
+				+ "Prezzo col'Iva €: " + this.getPrezzoIva() + ". \n" 
+				+ "PRODOTTO: " + this.codice + " - "  + this.nome + " - " + this.marca + " - €" + this.getPrezzoIva() + "\n  \n");
 		return riepilogoProdotto;
 	}
 }

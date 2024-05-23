@@ -12,7 +12,7 @@ public class Shop {
 		System.out.println("Qual'è prodotto ti serve? \n");
 		
 //	istanzio la classe col costruttore	
-		Prodotto prodotto1 = new Prodotto(0, null, null,  0, 0, 0);
+		Prodotto prodotto = new Prodotto(null, null, 0);
 		
 //		System.out.println("Inserisci il Nome del prodotto ");
 //		prodotto1.nome = input.nextLine();
@@ -21,10 +21,10 @@ public class Shop {
 //		System.out.println("Inserisci il prezzo del prodotto ");
 //		prodotto1.prezzo  = input.nextFloat();
 //	stampo riepilogo del prodotto	
-		System.out.println(prodotto1);
+		System.out.println(prodotto);
 		
 //	istanzio il prodotto valirizando le carateristiche del prodotto	
-		Smartphone smartphone = new Smartphone(0, "Smartphone", "Samsung", 150, 0, 0, 15478447, 30);
+		Smartphone smartphone = new Smartphone("Smartphone", "Samsung", 45.50f, 30, 0);
 //		System.out.println("Inserisci il Nome del prodotto ");
 //		smartphone.nome = input.nextLine();
 //		System.out.println("Inserisci una descrizione del prodotto ");
@@ -36,12 +36,12 @@ public class Shop {
 		System.out.println(smartphone);
 		
 //	istanzio il prodotto valirizando le carateristiche del prodotto	
-		Televisori televisore = new Televisori(0, "TV", "LG", 785, 0, 0, 32, true);
+		Televisori televisore = new Televisori("Tv", "LG", 450.50f, 32, false);
 //	stampo riepilogo del prodotto	
 		System.out.println(televisore);
 		
 //	istanzio il prodotto valirizando le carateristiche del prodotto	
-		Prodotto cuffie = new Cuffie(0, "Cuffie", "Samsung", 124, 0, 0, "blu", "no");
+		Prodotto cuffie = new Cuffie("Cuffie", "Samsung", 95.5f, "Blu", "Wires");
 //	stampo riepilogo del prodotto	
 		System.out.println(cuffie);
 		

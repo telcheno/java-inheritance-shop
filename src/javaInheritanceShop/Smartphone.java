@@ -6,14 +6,14 @@ public class Smartphone extends Prodotto {
 	private int memoria;
 
 //	agiungo el costruttore le carateristiche della classe
-	public Smartphone(int codice, String nome, String descrizione, float prezzo, float iva, float prezzoIva, int imei, int memoria) {
+	public Smartphone(String nome, String marca, float prezzo, int imei, int memoria) {
 		
 //nel costruttore la dicitura "super" si riferisce alla classe padre che gestisce le carateristiche della suer classe		
-		super(codice, nome, descrizione, prezzo, iva, prezzoIva);
+		super( nome, marca, prezzo);
 		
 //	carateristiche specifiche del prodotto	
 		this.imei = getImei();
-		this.memoria = memoria; 
+		this.memoria = getMemoria(memoria); 
 	}
 	
 //	metodo random che genera il codice imei 
@@ -22,11 +22,16 @@ public class Smartphone extends Prodotto {
 		return imei;
 	}
 
-	public int getMemoria() {
+	public int getMemoria(int input) {
+		memoria = input;
 		return memoria;
 	}
 
-//metodo che soprascribe il codici random del prodotto specifico
+	public void setMemoria(int memoria) {
+		this.memoria = memoria;
+	}
+
+	//metodo che soprascribe il codici random del prodotto specifico
 	@Override
 	public int getCodice() {
 		int codSmart = rand.nextInt(100000000);
@@ -39,7 +44,7 @@ public class Smartphone extends Prodotto {
 			String riepilogoProdotto = (super.toString()
 					+ "DATI SPESIFICI: \n"
 					+"Memoria: " + this.memoria 
-					+ " GB" + "\n" 
+					+ " GB di memoria" + "\n" 
 					+ "Codice IMEI: " + this.imei + ". \n");
 			return riepilogoProdotto;
 		}

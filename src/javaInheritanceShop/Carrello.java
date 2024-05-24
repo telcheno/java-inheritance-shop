@@ -13,21 +13,28 @@ import java.util.Scanner;
 public class Carrello {
 
 	public static void main(String[] args) {
+		//inporto metodo scanner
 		Scanner input = new Scanner(System.in);
 		System.out.println("Sceglie il tuo prodotto. \n -1 Smartphone \n -2 Televisore \n -3 Cuffie. \n");
+		//valoriso la variavile con input del utente
 		String  scelta = input.nextLine();
+		//
 		String prodottoScelto = scelta.toUpperCase();
 		
 		Prodotto prodotto = new Prodotto(null, null, 0f);
 		
 		System.out.println("Compia i dati del tuo prodotto.");
 		System.out.println("Nome del prodotto.");
-		prodotto.nome = input.nextLine();
+		String nome = input.nextLine();
+		prodotto.getNome(nome);
 
 		System.out.println("Marca del prodotto.");
-		prodotto.marca = input.nextLine();
+		String marca = input.nextLine();
+		prodotto.getMarca(marca); 
+		
 		System.out.println("Compia il prezzo prodotto.");
-		prodotto.prezzo = input.nextFloat();
+		float prezzo = input.nextFloat();
+		prodotto.getPrezzo(prezzo); 
 		System.out.println("Il calcolo sarà fatto col 22% del'Iva. \n");
 		
 		switch (prodottoScelto) {
@@ -36,7 +43,6 @@ public class Carrello {
 				Smartphone smartphone = new Smartphone(prodotto.nome, prodotto.marca, prodotto.prezzo, 0, 0);
 				int capacita = input.nextInt();
 				smartphone.getMemoria(capacita);
-				
 				System.out.println(smartphone);
 				break;
 				
@@ -48,6 +54,7 @@ public class Carrello {
 
 			System.out.println("Il televisore puo colegarsi a internet? ");
 			String tv = input.nextLine();
+
 			String tvSmart = tv.toLowerCase();
 			televisori.getSmart(tvSmart);
 						
@@ -59,6 +66,7 @@ public class Carrello {
 			System.out.println("Di che colore è le cuffie");
 			String coloreScelto = input.nextLine();
 			cuffie.getColore(coloreScelto);
+			
 			
 			System.out.println(cuffie);
 			break;

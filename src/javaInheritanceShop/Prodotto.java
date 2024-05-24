@@ -45,7 +45,8 @@ public class Prodotto {
 	
 //========================================//
 //metodi getters - setters
-	public String getNome() {
+	public String getNome(String input) {
+		nome = input;
 		return nome;
 	}
 
@@ -53,7 +54,8 @@ public class Prodotto {
 		this.nome = nome;
 	}
 
-	public String getMarca() {
+	public String getMarca(String input) {
+		marca = input;
 		return marca;
 	}
 
@@ -61,7 +63,8 @@ public class Prodotto {
 		this.marca = marca;
 	}
 
-	public float getPrezzo() {
+	public float getPrezzo(float input) {
+		prezzo = input;
 		return prezzo;
 	}
 

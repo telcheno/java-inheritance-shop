@@ -59,25 +59,25 @@ public class Carrello {
 				System.out.println(smartphone);
 				break;
 				
-			}case "TELEVISORE":{
-				//chiedo i dati specifici del prodotto 
-				System.out.println("Il televisore puo colegarsi a internet? ");
-				String tv = input.next();
-				String tvSmart = tv.toUpperCase();
-				System.out.println("Quanti polici ha il televisore?");
-				int dimensioni = input.nextInt();
+		}case "TELEVISORE":{
+			//chiedo i dati specifici del prodotto 
+			System.out.println("Il televisore puo colegarsi a internet? ");
+			String tv = input.next();
+			String tvSmart = tv.toUpperCase();
+			System.out.println("Quanti polici ha il televisore?");
+			int dimensioni = input.nextInt();
 				
-				//istanzio il prodotto sccelto
-				Televisori televisori = new Televisori(prodotto.nome, prodotto.marca, prodotto.prezzo, 0, null);
+			//istanzio il prodotto sccelto
+			Televisori televisori = new Televisori(prodotto.nome, prodotto.marca, prodotto.prezzo, 0, null);
 
-				//asegno le carateristiche scelte
-				televisori.getDimensioni(dimensioni);
-				televisori.getSmart(tvSmart);
+			//asegno le carateristiche scelte
+			televisori.getDimensioni(dimensioni);
+			televisori.getSmart(tvSmart);
 
-				//stampo il riepilogo del prpdotto scelto 
-				//con i dati generici e i dati specifici
-				System.out.println(televisori);
-				break;
+			//stampo il riepilogo del prpdotto scelto 
+			//con i dati generici e i dati specifici
+			System.out.println(televisori);
+			break;
 			
 		}case "CUFFIE": {
 			//chiedo i dati specifici del prodotto

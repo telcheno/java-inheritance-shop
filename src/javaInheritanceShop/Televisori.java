@@ -45,7 +45,7 @@ public Televisori(String nome, String marca, float prezzo, int dimensione, Strin
 				+ "DATI SPESIFICI: \n"
 				+"Dimensione: " + this.dimensioni 
 				+ " Polici" + "\n" 
-				+ "Il televisore " + this.smart + "è una smart TV.  \n");
+				+ "Il televisore " + this.smart + " è una smart TV.  \n");
 		return riepilogoProdotto;
 	}
 	

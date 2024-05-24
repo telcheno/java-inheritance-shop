@@ -22,7 +22,8 @@ public class Cuffie extends Prodotto{
 	}
 
 
-	public String getTipo() {
+	public String getTipo(String input) {
+		this.tipo = input;
 		return tipo;
 	}
 
@@ -36,7 +37,7 @@ public class Cuffie extends Prodotto{
 	public String toString() {
 		String riepilogoProdotto = (super.toString()
 				+ "DATI SPESIFICI: \n"
-				+"Le Cuffie sono di colore: " + this.colore  + "\n" 
+				+"Le Cuffie sono di colore " + this.colore  + ". \n" 
 				+ "Le Cuffie " + this.tipo + " sono wireles.  \n");
 		return riepilogoProdotto;
 	}
